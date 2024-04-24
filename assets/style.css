@@ -1,0 +1,164 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+    display: grid;
+    grid-template-areas:
+    "nav nav nav nav"
+    "aside main main main"
+    "footer footer footer footer"
+
+    ;
+}
+
+main{
+    grid-area: main;
+    display: grid;
+    background-color: #e6e6e6;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+    padding: 50px 100px;
+    border: 1px solid black;
+
+}
+h2{
+    text-transform: uppercase;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    padding:25px 100px;
+    align-items: center;
+}
+nav>ul{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+a{
+    text-transform: uppercase;
+    color: rgb(114, 74, 0);
+}
+footer{
+    background-color: black;
+    color: white;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    height: 20vh;
+    align-items: center;
+    text-align: center;
+}
+aside{
+    background-color: #e6e6e6;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid;
+}
+.section{
+    width: 100%;
+}
+.section>h4{
+    background-color: white;
+    padding: 2vh;
+    text-transform: uppercase;
+    outline: 1px solid; /* use instead of border */
+    margin-top: 1px;
+    margin-left: 1px;
+}
+.list>li{
+    outline: 1px solid; /* use instead of border */
+    margin-top: 1px;
+    margin-left: 1px;
+    padding: 1vh;
+}
+.cardImg {
+    width: 16rem;
+    height: 18rem;
+    border: 1px solid black;
+}
+
+.card {
+    margin: auto;
+    /* grid-area: card; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    /* width: 18rem; */
+    height: 95%;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    justify-content: space-between;
+    text-align: left;
+    /* align-items: center; */
+}
+
+.cardInfo>* {
+    padding-top: 7px;
+}
+
+.cardPrices {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+    justify-content: space-between;
+    text-align: left;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.cardInfo>h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(75, 75, 75);
+}
+
+.cardInfo>h5 {
+    font-size: 1.5rem;
+}
+
+.cardPrices>h5 {
+    padding: 7px;
+    /* text-align: right; */
+    font-size: 2rem;
+
+}
+
+.cardPrices>p {
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+}
+
+.ratingStars {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: 7px;
+}
+.addCart{
+    font-weight: bolder;
+    padding: 7px;
+    text-transform: uppercase;
+    background-color: orange;
+    border: solid 1px black;
+    border-radius: 17px;
+}
+.addCart:hover{
+    background-color: rgb(163, 106, 0);
+    color: white;
+}
